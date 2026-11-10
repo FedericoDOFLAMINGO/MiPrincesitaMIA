@@ -211,7 +211,6 @@ var busy=false;
 $('#say').addEventListener('click',function(){
   if(busy)return;busy=true;
   var v=$('#voice');v.innerHTML='';
-  try{var u=new SpeechSynthesisUtterance('Te quiero, Ángela. Frente a todo el mundo.');u.lang='es-MX';u.rate=.9;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}
   lines.forEach(function(t,i){
     setTimeout(function(){
       var d=document.createElement('div');d.textContent=t;v.appendChild(d);
